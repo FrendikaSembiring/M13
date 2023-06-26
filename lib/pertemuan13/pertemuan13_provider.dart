@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 class Pertemuan13Provider extends ChangeNotifier {
   double _sliderValue = 0;
+
+  var progressValue;
   double get sliderValue => _sliderValue;
   set setSliderValue(val) {
     _sliderValue = val;

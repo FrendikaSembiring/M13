@@ -8,14 +8,17 @@ class SlideWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final prov = Provider.of<Pertemuan13Provider>(context);
-    return Slider(
-      value: prov.sliderValue,
-      min: 0,
-      max: 10,
-      label: prov.sliderValue.round().toString(),
-      onChanged: (value) {
-        prov.setSliderValue = value;
-      },
+    return Tooltip(
+      message: prov.sliderValue.round().toString(),
+      child: Slider(
+        value: prov.sliderValue,
+        min: 0,
+        max: 10,
+        label: prov.sliderValue.round().toString(),
+        onChanged: (value) {
+          prov.setSliderValue = value;
+        },
+      ),
     );
   }
 }
